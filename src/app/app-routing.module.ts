@@ -14,7 +14,7 @@ const routes: Routes = [
     component:DetailCarComponent
   },
   {
-    path:'create-pokemon',
+    path:'create-car',
     component:CreateCarComponent
   },
   {
