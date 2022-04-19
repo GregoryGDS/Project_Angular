@@ -35,7 +35,7 @@ export class CreateCarComponent implements OnInit {
       horse_power: [null],
       pictures: [null, Validators.required],
       price: [null],
-      sold: [null, Validators.required],
+      sold: [null],
       mileage:[null]
     });
 
@@ -43,7 +43,7 @@ export class CreateCarComponent implements OnInit {
   onSubmit(){
     console.log("submit");
     console.log(this.formCreate);
-    
+
     if (this.formCreate.invalid) {
       console.log("invalid");
       return;
@@ -62,7 +62,7 @@ export class CreateCarComponent implements OnInit {
       horse_power: this.formCreate.value.horse_power,
       pictures: [this.formCreate.value.pictures],
       price: this.formCreate.value.price,
-      sold: this.formCreate.value.sold,
+      sold: (this.formCreate.value.sold == null)?false:true,
       mileage:this.formCreate.value.mileage
     };
 

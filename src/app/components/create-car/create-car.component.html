@@ -55,14 +55,15 @@
     </mat-form-field>
 
     <mat-form-field>
+        <mat-label>Kilométrage(km)</mat-label>
+        <input matInput type="string" formControlName="mileage">
+    </mat-form-field>
+
+    <mat-form-field>
         <mat-label>Image(s)</mat-label>
         <input matInput type="string" formControlName="pictures" required>
     </mat-form-field>
 
-    <mat-form-field>
-        <mat-label>Kilométrage(km)</mat-label>
-        <input matInput type="string" formControlName="mileage">
-    </mat-form-field>
     <br>
 
     <mat-form-field>
@@ -70,7 +71,7 @@
         <input matInput type="number" formControlName="price">
     </mat-form-field>
 
-    <mat-checkbox formControlName="sold" required>
+    <mat-checkbox formControlName="sold">
         Vendu
     </mat-checkbox>
     <br> <br>
