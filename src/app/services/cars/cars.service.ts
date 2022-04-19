@@ -24,4 +24,8 @@ export class CarsService {
   createNewCar(car: Createcar): Observable<Createcar>{
     return this.http.post<Createcar>(`${this.BASE_URL}`,car);
   }
+
+  deleteCar(idCar: number): Observable<Car>{
+    return this.http.delete<Car>(`${this.BASE_URL}/${idCar}`);
+  }
 }
