@@ -1,0 +1,8 @@
+tr > td:first-child{
+    font-weight: bold;
+}
+
+
+img{
+    max-height: 400px;
+}

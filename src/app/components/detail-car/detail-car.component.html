@@ -1,0 +1,72 @@
+
+<h1>{{car.title}}</h1>
+
+<img mat-card-lg-image [src]="car.pictures[0]">
+<img mat-card-lg-image [src]="car.pictures[1]">
+
+
+<table>
+        <tr>
+            <td>Id</td>
+            <td>{{car.id}} </td>
+        </tr>
+
+        <tr>
+            <td>Adresse</td>
+            <td>{{car.address}} </td>
+        </tr>
+        <tr>
+            <td>Marque</td>
+            <td>{{car.brand}} </td>
+        </tr>
+        <tr>
+            <td>Modèle/année</td>
+            <td>{{car.model}} - {{car.model_year}}</td>
+        </tr>
+        <tr>
+            <td>Année assurance</td>
+            <td>{{car.issuance}} </td>
+        </tr>
+        <tr>
+            <td>Kilométrage</td>
+            <td> <span *ngIf="car.mileage;else na">{{car.mileage}} km</span></td>
+        </tr>
+        <tr>
+            <td>Carburant</td>
+            <td>{{car.fuel}} </td>
+        </tr>
+        <tr>
+            <td>Couleur</td>
+            <td>{{car.color}} </td>
+        </tr>
+        <tr>
+            <td>Nb portes</td>
+            <td>{{car.numbers_doors}} </td>
+        </tr>
+        <tr>
+            <td>Chevaux</td>
+            <td>{{car.horse_power}} </td>
+        </tr>
+        <tr>
+            <td>Prix</td>
+            <td><span *ngIf="car.price;else na">{{car.price}} €</span></td>
+        </tr>
+        <tr>
+            <td>Vendu</td>
+            <td>{{car.sold}} </td>
+        </tr>
+</table>
+
+
+<ng-template #na>N/A</ng-template>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<mat-card class="mat-elevation-z2" >
+    <mat-card-title [class.titleCard]="true">
+        <img mat-card-lg-image [src]="oneCar.pictures[0]">
+    </mat-card-title>
+    <mat-card-subtitle [class.titleCard]="true">
+        {{oneCar.title}}
+    </mat-card-subtitle>
+
+    <mat-list>
+        <mat-divider ></mat-divider>
+        <mat-card-content>Model: {{oneCar.model}}</mat-card-content>
+        <mat-divider ></mat-divider>
+        <mat-card-content>Brand: {{oneCar.brand}}</mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content>Price: <span *ngIf="oneCar.price;else na">{{oneCar.price}}€</span></mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content><a href="#" [routerLink]="['detail-car',oneCar.id]">Détail</a></mat-card-content>
+    </mat-list>
+
+</mat-card>
+
+
+<ng-template #na>N/A</ng-template>
