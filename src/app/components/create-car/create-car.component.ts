@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Car } from 'src/app/models/car';
 import { Createcar } from 'src/app/models/createcar';
 import { CarsService } from 'src/app/services/cars/cars.service';
@@ -16,7 +17,8 @@ export class CreateCarComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private carsService:CarsService
+    private carsService:CarsService,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -66,7 +68,7 @@ export class CreateCarComponent implements OnInit {
       mileage:this.formCreate.value.mileage
     };
 
-console.log(this.newCar);
+    console.log(this.newCar);
 
     this.carsService.createNewCar(this.newCar).subscribe({
       next: (res) => {
@@ -77,8 +79,13 @@ console.log(this.newCar);
       },
       complete: () => {
         console.log('add send');
+        this.router.navigate(['/']);
       }
     });
+
+
   }
+
+  
 
 }
