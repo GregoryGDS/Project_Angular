@@ -15,7 +15,8 @@
         <mat-card-content>Price: <span *ngIf="oneCar.price;else na">{{oneCar.price}}€</span></mat-card-content>
         <mat-divider></mat-divider>
         <mat-card-content>
-            <a href="#" [routerLink]="['detail-car',oneCar.id]">Détail</a>
+            <a href="#" [routerLink]="['detail-car',oneCar.id]">Détail</a>&nbsp;
+            <a href="#" [routerLink]="['update-car',oneCar.id]">Modifier</a>&nbsp;
             <button mat-raised-button color="primary" (click)="removeCar(oneCar.id)">Supprimer</button> 
         </mat-card-content>
     </mat-list>

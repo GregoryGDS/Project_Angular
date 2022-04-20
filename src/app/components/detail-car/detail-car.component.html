@@ -1,6 +1,10 @@
 
 <h1>{{car.title}}</h1>
-
+<h3>    
+    <span>
+        <a href="#" [routerLink]="['../../update-car',car.id]">Modifier</a>
+    </span>
+</h3>
 <img mat-card-lg-image [src]="car.pictures[0]">
 <img mat-card-lg-image [src]="car.pictures[1]">
 

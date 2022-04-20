@@ -44,10 +44,10 @@ export class CreateCarComponent implements OnInit {
   }
   onSubmit(){
     console.log("submit");
-    console.log(this.formCreate);
+    //console.log(this.formCreate);
 
     if (this.formCreate.invalid) {
-      console.log("invalid");
+      //console.log("invalid");
       return;
     }
 
@@ -82,7 +82,6 @@ export class CreateCarComponent implements OnInit {
         this.router.navigate(['/']);
       }
     });
-
 
   }
 

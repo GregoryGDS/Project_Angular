@@ -8,8 +8,10 @@ import { CarComponent } from './components/car/car.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DetailCarComponent } from './components/detail-car/detail-car.component';
 import { CreateCarComponent } from './components/create-car/create-car.component';
+import { UpdateCarComponent } from './components/update-car/update-car.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatListModule } from '@angular/material/list';
@@ -24,7 +26,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,17 +33,18 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     CarComponent,
     NavbarComponent,
     DetailCarComponent,
-    CreateCarComponent
+    CreateCarComponent,
+    UpdateCarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
     HttpClientModule,
-
+    
     FormsModule,
     ReactiveFormsModule,
-
+    
     //material design
     MatSliderModule,
     MatListModule,
@@ -56,7 +58,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     BrowserAnimationsModule,
     MatCheckboxModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

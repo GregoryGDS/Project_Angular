@@ -1,0 +1,81 @@
+<h1>Update de  {{updateCar.id}}</h1>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="formUpdate">
+
+    <mat-form-field>
+        <mat-label>Titre</mat-label>
+        <input matInput type="string" formControlName="title" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Adresse</mat-label>
+        <input matInput type="text" formControlName="address" required>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-label>Marque</mat-label>
+        <input matInput type="text" formControlName="brand" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Modèle</mat-label>
+        <input matInput type="text" formControlName="model" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Année du modèle</mat-label>
+        <input matInput type="number" formControlName="model_year" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Date assurance</mat-label>
+        <input matInput type="date" formControlName="issuance" required>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Carbulant</mat-label>
+        <input matInput type="string" formControlName="fuel" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Couleur</mat-label>
+        <input matInput type="string" formControlName="color">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Nombre portes</mat-label>
+        <input matInput type="number" formControlName="numbers_doors" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Chevaux</mat-label>
+        <input matInput type="number" formControlName="horse_power">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Kilométrage(km)</mat-label>
+        <input matInput type="string" formControlName="mileage">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Image(s)</mat-label>
+        <input matInput type="string" formControlName="pictures" required>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+        <mat-label>Prix</mat-label>
+        <input matInput type="number" formControlName="price">
+    </mat-form-field>
+
+    <mat-checkbox formControlName="sold">
+        Vendu
+    </mat-checkbox>
+    <br> <br>
+    <button mat-raised-button color="primary" type="submit">Update</button>
+
+
+</form>

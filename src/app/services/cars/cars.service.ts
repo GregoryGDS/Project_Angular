@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Car } from 'src/app/models/car';
 import { Createcar } from 'src/app/models/createcar';
+import { Updatecar } from 'src/app/models/updatecar';
 
 @Injectable({
   providedIn: 'root'
@@ -28,4 +29,9 @@ export class CarsService {
   deleteCar(idCar: number): Observable<Car>{
     return this.http.delete<Car>(`${this.BASE_URL}/${idCar}`);
   }
+
+  updateCar(car: Updatecar): Observable<Updatecar>{
+    return this.http.put<Updatecar>(`${this.BASE_URL}//${car.id}`, car);
+  }
+
 }
