@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,8 @@ import { CreateCarComponent } from './components/create-car/create-car.component
 import { UpdateCarComponent } from './components/update-car/update-car.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { DatePipe } from '@angular/common';
+import { DatePipe, registerLocaleData } from '@angular/common';
+import  localeFR  from '@angular/common/locales/fr';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatListModule } from '@angular/material/list';
@@ -25,6 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+
+registerLocaleData(localeFR);
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     BrowserAnimationsModule,
     MatCheckboxModule
   ],
-  providers: [DatePipe],
+  providers: [
+    DatePipe,
+    {provide: LOCALE_ID, useValue:'fr'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

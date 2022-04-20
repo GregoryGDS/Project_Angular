@@ -18,7 +18,7 @@ export class CarsService {
     return this.http.get<Car[]>(`${this.BASE_URL}`);
   }
 
-  getOneCar(idCar: number): Observable<Car>{
+  getOneCar(idCar: string | number | null): Observable<Car>{
     return this.http.get<Car>(`${this.BASE_URL}/${idCar}`);
   }
 
@@ -26,12 +26,12 @@ export class CarsService {
     return this.http.post<Createcar>(`${this.BASE_URL}`,car);
   }
 
-  deleteCar(idCar: number): Observable<Car>{
+  deleteCar(idCar: string | number | null): Observable<Car>{
     return this.http.delete<Car>(`${this.BASE_URL}/${idCar}`);
   }
 
   updateCar(car: Updatecar): Observable<Updatecar>{
-    return this.http.put<Updatecar>(`${this.BASE_URL}//${car.id}`, car);
+    return this.http.put<Updatecar>(`${this.BASE_URL}/${car.id}`, car);
   }
 
 }

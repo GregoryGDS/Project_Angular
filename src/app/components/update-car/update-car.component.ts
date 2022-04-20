@@ -12,7 +12,7 @@ import { CarsService } from 'src/app/services/cars/cars.service';
 })
 export class UpdateCarComponent implements OnInit {
 
-  idCar!:String | null;
+  idCar!:string | null;
   updateCar!: Car;
 
   formUpdate!: FormGroup;
@@ -29,7 +29,7 @@ export class UpdateCarComponent implements OnInit {
       this.idCar = param.get('id');
     });
   
-    this.carsService.getOneCar(Number(this.idCar)).subscribe({
+    this.carsService.getOneCar(this.idCar).subscribe({
       next: carHttp =>{
         this.updateCar = carHttp;
 
