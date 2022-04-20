@@ -53,7 +53,8 @@ export class UpdateCarComponent implements OnInit {
       color: [car.color],
       numbers_doors: [car.numbers_doors, Validators.required],
       horse_power: [car.horse_power],
-      pictures: [car.pictures, Validators.required],
+      pictures1: [car.pictures[0], Validators.required],
+      pictures2: [car.pictures[1]],
       price: [car.price],
       sold: [car.sold],
       mileage:[car.mileage]
@@ -79,7 +80,10 @@ export class UpdateCarComponent implements OnInit {
       color: this.formUpdate.value.color,
       numbers_doors: this.formUpdate.value.numbers_doors,
       horse_power: this.formUpdate.value.horse_power,
-      pictures: [this.formUpdate.value.pictures],
+      pictures: [
+        this.formUpdate.value.pictures1,
+        this.formUpdate.value.pictures2
+      ],
       price: this.formUpdate.value.price,
       sold: this.formUpdate.value.sold,
       mileage:this.formUpdate.value.mileage

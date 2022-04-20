@@ -92,10 +92,8 @@
       "numbers_doors": 6,
       "horse_power": 204,
       "pictures": [
-        [
-          "https://img.leboncoin.fr/api/v1/lbcpb1/images/e8/a0/a5/e8a0a5d22683cfdad238caaee84ba2fc4df7c091.jpg?rule=ad-large",
-          "https://img.leboncoin.fr/api/v1/lbcpb1/images/db/dd/8c/dbdd8c040a6d2c5b8cae00b7b6a49a3761175772.jpg?rule=ad-large"
-        ]
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/e8/a0/a5/e8a0a5d22683cfdad238caaee84ba2fc4df7c091.jpg?rule=ad-large",
+        "https://img.leboncoin.fr/api/v1/lbcpb1/images/db/dd/8c/dbdd8c040a6d2c5b8cae00b7b6a49a3761175772.jpg?rule=ad-large"
       ],
       "price": 33300,
       "sold": false,
