@@ -29,6 +29,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SortPricePipe } from './pipes/sortPrice/sort-price.pipe';
 import { TitleFilterPipe } from './pipes/title-filter/title-filter.pipe';
 import { SortIssuancePipe } from './pipes/sortissuance/sort-issuance.pipe';
+import { SortIdPipe } from './pipes/id-filter/sort-id.pipe';
 
 registerLocaleData(localeFR);
 
@@ -43,7 +44,8 @@ registerLocaleData(localeFR);
     UpdateCarComponent,
     SortPricePipe,
     TitleFilterPipe,
-    SortIssuancePipe
+    SortIssuancePipe,
+    SortIdPipe
   ],
   imports: [
     BrowserModule,
