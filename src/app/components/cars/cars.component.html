@@ -1,11 +1,12 @@
 
 
-<h3> Trie par Prix : </h3><span><button mat-raised-button color="primary" (click)="sortPrice()">{{orderPrice}}</button> </span>
+<h3> Trie par Prix: <button mat-raised-button color="primary" (click)="sortPrice()">{{orderPrice}}</button> </h3>
+<h3> Filtre du titre: <input type=”text” [(ngModel)]="filterargs" name="filterargs" placeholder="Search"></h3>
 
 
 <mat-grid-list cols="3">
 
-    <mat-grid-tile *ngFor="let car of cars | sortPrice:orderPrice">
+    <mat-grid-tile *ngFor="let car of cars | sortPrice:orderPrice | titleFilter:filterargs">
 
         <app-car [oneCar]="car"></app-car>
 

@@ -11,6 +11,7 @@ export class CarsComponent implements OnInit {
 
   cars: Car[] = [];
   orderPrice: string = 'ASC';
+  filterargs: string = '';
 
   constructor(private carsService:CarsService) { }
 
