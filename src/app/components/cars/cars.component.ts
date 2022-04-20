@@ -10,6 +10,7 @@ import { CarsService } from 'src/app/services/cars/cars.service';
 export class CarsComponent implements OnInit {
 
   cars: Car[] = [];
+  orderPrice: string = 'ASC';
 
   constructor(private carsService:CarsService) { }
 
@@ -26,6 +27,14 @@ export class CarsComponent implements OnInit {
         console.log('completed all cars');
       }
     });
+  }
+
+  sortPrice(){
+    if (this.orderPrice === 'ASC') {
+      this.orderPrice = 'DESC';
+    }else{
+      this.orderPrice = 'ASC';
+    }
   }
 
 }

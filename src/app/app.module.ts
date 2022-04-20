@@ -26,6 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { SortPricePipe } from './pipes/sortPrice/sort-price.pipe';
+import { TitleFilterPipe } from './pipes/title-filter/title-filter.pipe';
 
 registerLocaleData(localeFR);
 
@@ -37,7 +39,9 @@ registerLocaleData(localeFR);
     NavbarComponent,
     DetailCarComponent,
     CreateCarComponent,
-    UpdateCarComponent
+    UpdateCarComponent,
+    SortPricePipe,
+    TitleFilterPipe
   ],
   imports: [
     BrowserModule,

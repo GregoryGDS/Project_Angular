@@ -1,6 +1,11 @@
+
+
+<h3> Trie par Prix : </h3><span><button mat-raised-button color="primary" (click)="sortPrice()">{{orderPrice}}</button> </span>
+
+
 <mat-grid-list cols="3">
 
-    <mat-grid-tile *ngFor="let car of cars ">
+    <mat-grid-tile *ngFor="let car of cars | sortPrice:orderPrice">
 
         <app-car [oneCar]="car"></app-car>
 
