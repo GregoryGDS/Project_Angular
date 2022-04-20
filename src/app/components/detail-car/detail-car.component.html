@@ -1,6 +1,10 @@
 
 <h1>{{car.title}}</h1>
-
+<h3>    
+    <span>
+        <a href="#" [routerLink]="['../../update-car',car.id]">Modifier</a>
+    </span>
+</h3>
 <img mat-card-lg-image [src]="car.pictures[0]">
 <img mat-card-lg-image [src]="car.pictures[1]">
 
@@ -24,12 +28,12 @@
             <td>{{car.model}} - {{car.model_year}}</td>
         </tr>
         <tr>
-            <td>Année assurance</td>
+            <td>Date mise en service</td>
             <td>{{car.issuance}} </td>
         </tr>
         <tr>
             <td>Kilométrage</td>
-            <td> <span *ngIf="car.mileage;else na">{{car.mileage}} km</span></td>
+            <td> <span *ngIf="car.mileage;else na">{{car.mileage  | currency:'eur':'km':'1.0-2' }}</span></td>
         </tr>
         <tr>
             <td>Carburant</td>
@@ -49,11 +53,14 @@
         </tr>
         <tr>
             <td>Prix</td>
-            <td><span *ngIf="car.price;else na">{{car.price}} €</span></td>
+            <td><span *ngIf="car.price;else na">{{car.price  | currency:'€':'symbol':'1.0-2'}}</span></td>
         </tr>
         <tr>
             <td>Vendu</td>
-            <td>{{car.sold}} </td>
+            <td>
+                <span *ngIf="car.sold == true">Vendu</span>
+                <span *ngIf="car.sold == false">A vendre</span>
+            </td>
         </tr>
 </table>
 

@@ -10,7 +10,7 @@ import { CarsService } from 'src/app/services/cars/cars.service';
 })
 export class DetailCarComponent implements OnInit {
 
-  idCar!:String | null;
+  idCar!:string | null;
   car!:Car;
 
   constructor(private _Activatedroute:ActivatedRoute, private carsService:CarsService ) { }
@@ -20,7 +20,7 @@ export class DetailCarComponent implements OnInit {
       this.idCar = paramRoute.get('id');
     });
 
-    this.carsService.getOneCar(Number(this.idCar)).subscribe({
+    this.carsService.getOneCar(this.idCar).subscribe({
       next: carHttp =>{
         this.car = carHttp;
       }

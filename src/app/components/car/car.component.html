@@ -1,5 +1,6 @@
 <mat-card class="mat-elevation-z2" >
     <mat-card-title [class.titleCard]="true">
+        <h2>#{{oneCar.id}}</h2>
         <img mat-card-lg-image [src]="oneCar.pictures[0]">
     </mat-card-title>
     <mat-card-subtitle [class.titleCard]="true">
@@ -12,9 +13,15 @@
         <mat-divider ></mat-divider>
         <mat-card-content>Brand: {{oneCar.brand}}</mat-card-content>
         <mat-divider></mat-divider>
-        <mat-card-content>Price: <span *ngIf="oneCar.price;else na">{{oneCar.price}}€</span></mat-card-content>
+        <mat-card-content>Price: <span *ngIf="oneCar.price;else na">{{oneCar.price | currency:'€':'symbol':'1.0-2'}}</span></mat-card-content>
         <mat-divider></mat-divider>
-        <mat-card-content><a href="#" [routerLink]="['detail-car',oneCar.id]">Détail</a></mat-card-content>
+        <mat-card-content>Mise en service: {{oneCar.issuance | date:'dd/MM/yyyy'}}</mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <a mat-raised-button color="primary" href="#" [routerLink]="['detail-car',oneCar.id]">Détail</a>&nbsp;
+            <a mat-raised-button color="primary" href="#" [routerLink]="['update-car',oneCar.id]">Modifier</a>&nbsp;
+            <button mat-raised-button color="primary" (click)="removeCar(oneCar.id)">Supprimer</button> 
+        </mat-card-content>
     </mat-list>
 
 </mat-card>

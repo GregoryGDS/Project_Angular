@@ -10,6 +10,11 @@ import { CarsService } from 'src/app/services/cars/cars.service';
 export class CarsComponent implements OnInit {
 
   cars: Car[] = [];
+  orderPrice: string = 'ASC';
+  orderIssuance: string = 'ASC';
+  orderId: string = 'ASC';
+
+  filterargs: string = '';
 
   constructor(private carsService:CarsService) { }
 
@@ -26,6 +31,30 @@ export class CarsComponent implements OnInit {
         console.log('completed all cars');
       }
     });
+  }
+
+  sortPrice(){
+    if (this.orderPrice === 'ASC') {
+      this.orderPrice = 'DESC';
+    }else{
+      this.orderPrice = 'ASC';
+    }
+  }
+
+  sortIssuance(){
+    if (this.orderIssuance === 'ASC') {
+      this.orderIssuance = 'DESC';
+    }else{
+      this.orderIssuance = 'ASC';
+    }
+  }
+
+  sortId(){
+    if (this.orderId === 'ASC') {
+      this.orderId = 'DESC';
+    }else{
+      this.orderId = 'ASC';
+    }
   }
 
 }

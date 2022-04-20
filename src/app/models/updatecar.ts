@@ -1,4 +1,4 @@
-export interface Car {
+export interface Updatecar {
     id:number,
     title:string,
     address:string,

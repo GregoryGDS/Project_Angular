@@ -1,3 +1,23 @@
+- Créer un projet Angular 
+- Effectuer un CRUD sur toutes vos voitures :
+-- Afficher les voitures (Quelques informations seulement)
+-- Permettre l'ajout avec un formulaire, l'edition et la suppression d'une voiture
+-- Permettre l'affichage d'une voiture avec tous leurs détails (Composant à part)
+
+-- Mettre en place un filtre : 
+- Annonce la plus récente à la plus ancienne
+- Annonce la plus ancienne à la plus récente
+- Prix croissants
+- Prix décroissants
+
+-- Mettre en place une recherche par mot
+-- Mettre en place un prix minimum et un prix maximum pour la recherche
+
+- Utiliser un cadriciel (Boostrap,  Material Angular, Tailwind...etc)
+
+
+
+
 # Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.

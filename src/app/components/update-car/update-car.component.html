@@ -1,6 +1,6 @@
-<h1>Ajouter Voiture</h1>
+<h1>Update de  {{updateCar.id}}</h1>
 
-<form (ngSubmit)="onSubmit()" [formGroup]="formCreate">
+<form (ngSubmit)="onSubmit()" [formGroup]="formUpdate">
 
     <mat-form-field>
         <mat-label>Titre</mat-label>
@@ -58,10 +58,17 @@
         <mat-label>Kilométrage(km)</mat-label>
         <input matInput type="string" formControlName="mileage">
     </mat-form-field>
+    
+    <br>
+    
+    <mat-form-field>
+        <mat-label>Image 1</mat-label>
+        <input matInput type="string" formControlName="pictures1" required>
+    </mat-form-field>
 
     <mat-form-field>
-        <mat-label>Image(s)</mat-label>
-        <input matInput type="string" formControlName="pictures" required>
+        <mat-label>Image 2</mat-label>
+        <input matInput type="string" formControlName="pictures2" required>
     </mat-form-field>
 
     <br>
@@ -75,7 +82,7 @@
         Vendu
     </mat-checkbox>
     <br> <br>
-    <button mat-raised-button color="primary" type="submit">Ajouter</button>
+    <button mat-raised-button color="primary" type="submit">Update</button>
 
 
 </form>
