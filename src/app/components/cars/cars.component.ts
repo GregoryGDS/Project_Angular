@@ -11,6 +11,8 @@ export class CarsComponent implements OnInit {
 
   cars: Car[] = [];
   orderPrice: string = 'ASC';
+  orderIssuance: string = 'ASC';
+  
   filterargs: string = '';
 
   constructor(private carsService:CarsService) { }
@@ -35,6 +37,14 @@ export class CarsComponent implements OnInit {
       this.orderPrice = 'DESC';
     }else{
       this.orderPrice = 'ASC';
+    }
+  }
+
+  sortIssuance(){
+    if (this.orderIssuance === 'ASC') {
+      this.orderIssuance = 'DESC';
+    }else{
+      this.orderIssuance = 'ASC';
     }
   }
 

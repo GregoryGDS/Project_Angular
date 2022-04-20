@@ -27,18 +27,18 @@
       "brand": "Audi",
       "model": "Q5",
       "model_year": 2019,
-      "issuance": "01/02/2019",
-      "mileage": 55510,
+      "issuance": "2019-01-02",
       "fuel": "diesel",
       "color": "blue",
       "numbers_doors": 5,
       "horse_power": 190,
-      "price": 40990,
       "pictures": [
         "https://img.leboncoin.fr/api/v1/lbcpb1/images/b0/3d/e4/b03de4322311bf5ded911da4db2b9947a49412dd.jpg?rule=classified-1200x800-jpg",
         "https://img.leboncoin.fr/api/v1/lbcpb1/images/fb/07/12/fb0712883967c8c0eb52db9dab61f729d54c37bc.jpg?rule=ad-large"
       ],
-      "sold": false
+      "price": 40990,
+      "sold": false,
+      "mileage": 55510
     },
     {
       "id": 3,
@@ -47,8 +47,7 @@
       "brand": "Audi",
       "model": "TT",
       "model_year": 2018,
-      "issuance": "01/02/2019",
-      "mileage": 36104,
+      "issuance": "2019-01-02",
       "fuel": "diesel",
       "color": "noir",
       "numbers_doors": 3,
@@ -57,7 +56,9 @@
         "https://img.leboncoin.fr/api/v1/lbcpb1/images/9c/34/57/9c34570cff0035019b9c49e766164a9abb6be689.jpg?rule=ad-large",
         "https://img.leboncoin.fr/api/v1/lbcpb1/images/0b/96/bd/0b96bdd615e3bd7ae31ae6d6c65aea6d03675af6.jpg?rule=ad-large"
       ],
-      "sold": false
+      "price": null,
+      "sold": false,
+      "mileage": 36104
     },
     {
       "id": 4,

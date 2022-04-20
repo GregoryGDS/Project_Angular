@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { SortPricePipe } from './pipes/sortPrice/sort-price.pipe';
 import { TitleFilterPipe } from './pipes/title-filter/title-filter.pipe';
+import { SortIssuancePipe } from './pipes/sortissuance/sort-issuance.pipe';
 
 registerLocaleData(localeFR);
 
@@ -41,7 +42,8 @@ registerLocaleData(localeFR);
     CreateCarComponent,
     UpdateCarComponent,
     SortPricePipe,
-    TitleFilterPipe
+    TitleFilterPipe,
+    SortIssuancePipe
   ],
   imports: [
     BrowserModule,
