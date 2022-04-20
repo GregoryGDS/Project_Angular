@@ -14,7 +14,7 @@
         <mat-divider></mat-divider>
         <mat-card-content>Price: <span *ngIf="oneCar.price;else na">{{oneCar.price | currency:'€':'symbol':'1.0-2'}}</span></mat-card-content>
         <mat-divider></mat-divider>
-        <mat-card-content>Mise en service: {{oneCar.issuance}}</mat-card-content>
+        <mat-card-content>Mise en service: {{oneCar.issuance | date:'dd/MM/yyyy'}}</mat-card-content>
         <mat-divider></mat-divider>
         <mat-card-content>
             <a mat-raised-button color="primary" href="#" [routerLink]="['detail-car',oneCar.id]">Détail</a>&nbsp;
